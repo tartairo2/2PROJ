@@ -65,7 +65,10 @@ class Interface:
         for event in events:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1 and button_rect.collidepoint(event.pos):
-                    print(f"Button {button_index} click")
+                    print(f"Button {button_index} clicked")
+                    if button_index == 3:  # Bouton "Quitt"
+                        pygame.quit()
+                        sys.exit()
 
     def draw_buttons(self):
         self.screen.blit(self.button1_surface, self.button1_rect.topleft)
