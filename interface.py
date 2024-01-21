@@ -17,7 +17,7 @@ class Interface:
         self.running = True
 
         # Chargement de l'image de fond et redimensionnement
-        self.background_image = pygame.image.load("bg.jpeg")
+        self.background_image = pygame.image.load("bg.png")
         self.background_image = pygame.transform.scale(self.background_image, (self.screen_width, self.screen_height))
 
         # Définir les couleurs
